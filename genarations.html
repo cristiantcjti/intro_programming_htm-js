@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+    function header(header) {
+        document.write("<h1>"+header+"</h1>");
+        skipLine();
+    }
+    function skipLine(){
+        document.write("<br><hr><br>");
+    }
+    function show(msg){
+        document.write("<big>"+msg+"<big>");
+        skipLine();
+    }
+    var average = 28;
+    var discovered = 1500;
+    var currentYear = 2021;
+    var yearsPassed = currentYear - discovered;
+    var generations = Math.round(yearsPassed / average);
+    header("Number of Brazilian's genarations!")
+    show("Brazil was discovered in: "+ discovered);
+    show("The average for a new genaration in years is: "+ average);
+    show("We are in: "+ currentYear);
+    show("Thus the total brazilian's generations is:"+ generations +" genarations!");
+</script>
