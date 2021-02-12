@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine(){
+        document.write("<br><br>");
+    }
+    function show(msg){
+        document.write(msg);
+        skipLine();
+    }
+    function imc(weight,height){
+        return weight / (height * height);
+    } 
+    var name = prompt("Write your name: ");
+    var weight = prompt("Write your weight: ");
+    var height = prompt("Write your height: ");
+
+    
+    show(name + ", your IMC is : " + imc(weight,height))
+
+
+</script>
