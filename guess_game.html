@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine(){
+        document.write("<br><br>");
+    }
+    function show(msg){
+        document.write(msg);
+        skipLine();
+    }
+    function sortNumber(n){
+        return Math.round(Math.random() * n)
+    }
+
+    var thougthNum =  sortNumber(100); 
+    var guessed = parseInt(prompt("Guess a number: "))
+
+    if( thougthNum == guessed){
+        show("Congratulations, you've got it!")
+    }
+    if (thougthNum < guessed){
+        show("Sorry you failed....the guessed number is lower: "+ thougthNum);
+    }else {
+        show("Sorry you failed....the guessed number is higher: "+ thougthNum);
+    }
+
+   
+
+
+</script>

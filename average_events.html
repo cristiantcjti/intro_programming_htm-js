@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<script>
+
+    function skipLine() {
+
+        document.write("<br>");
+    }
+
+    function show(msg) {
+
+        document.write(msg);
+        skipLine();
+    }
+
+    var totalEvents = parseInt(prompt("Write the total events:"));
+
+    var count = 1;
+
+    var totalExpenses = 0;
+
+    while(count <= totalEvents) {
+
+        var expense = parseFloat(prompt("Write the total event's expense :"));
+
+        totalExpenses = totalExpenses + expense;
+
+        count++;
+    }
+
+    var media = totalExpenses / totalEvents;
+
+    show("Expense average " + media);
+</script>

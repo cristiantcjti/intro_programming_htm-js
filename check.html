@@ -1,0 +1,56 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>
+   Compare values 
+</button>
+
+<script>
+    function sortNumber(){
+        return Math.round(Math.random()*10);
+    }
+    function getNumbers(num){
+        var secrets = [];
+        count = 1;
+        while(count <= num){
+            var randomNum = sortNumber();
+            var found = false;
+            if (randomNum != 0){
+                for(var pos = 0; pos < secrets.length;pos++){
+                    if (secrets[pos] == randomNum){
+                        found = true;
+                        break;
+                    }
+                }
+                if (found == false){
+                    secrets.push(randomNum)
+                    count++;
+                }
+            }
+        }
+        return secrets;
+    }
+    function check(){
+        var found = false;
+
+        for(var pos = 0; pos < secret.length;pos++){
+            if(input.value == secret[pos]){
+                alert("The numbers are the same!");
+                found = true;
+            }
+        }
+        if(!found){
+                alert("Numbers are different!");
+            }
+        input.value = '';
+        input.focus();
+    }
+
+    var secret = getNumbers(10);
+    console.log(secret);
+    var input = document.querySelector("input"); // GET THE INPUT BOX CONTENT
+    input.focus();
+    var button = document.querySelector("button");
+    button.onclick = check;
+
+</script>

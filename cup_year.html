@@ -1,0 +1,19 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine(){
+        document.write("<br><br>");
+    }
+    function show(msg){
+        document.write(msg);
+        skipLine();
+    }
+
+    var cup = 1930; 
+    var limitYear = parseInt(prompt("Write a limit cup year: "));
+    while(cup <= limitYear){
+        show("Cup in : "+ cup);
+        cup += 4;
+    }
+    show("End!")
+</script>

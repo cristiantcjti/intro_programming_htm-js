@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<script>
+    function skipLine(){
+        document.write("<br><br>");
+    }
+    function show(msg){
+        document.write(msg);
+        skipLine();
+    }
+
+    var login = "cris";
+    var password = "cris321";
+    var attemp = 3;
+
+
+    while(attemp > 0){
+        var loginWritten = prompt("Write your login: ");
+        var passwordWritten = prompt("Write your password: ");
+        if(loginWritten == login && passwordWritten == password){
+            show("Welcome to javascript!");
+            break
+        }else{
+            attemp--;
+            console.log(attemp);
+            if (attemp == 0){  
+                show("You access is temporarily blocked!");
+            }else{
+                alert("Insert data. Try again!")
+            }
+        }
+    }  
+
+</script>

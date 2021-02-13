@@ -14,9 +14,21 @@
     var name = prompt("Write your name: ");
     var weight = prompt("Write your weight: ");
     var height = prompt("Write your height: ");
+    var imcCalc = imc(weight,height)
 
     
-    show(name + ", your IMC is : " + imc(weight,height))
+    show(name + ", your IMC is : " + imcCalc)
+
+    if( imcCalc < 18.5 ){
+        show("Your IMC is lower than that recommended!");
+    }
+    if( imcCalc > 35 ){
+        show("Your IMC is higher than that recommended!");
+    }
+    if(imcCalc >= 18.5 && imcCalc <= 35 ) {
+        show("Your IMC is excelent!");
+    }
+
 
 
 </script>
